@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Current Date Example</title>
+</head>
+<body onbeforeunload="return myFunction()">
+
+    <h1>Today's Date:</h1>
+    <p id="currentDate"></p>
+
+    <script>
+       //Get the current date
+        var currentDate = new Date();
+
+        // Get the element where you want to display the date
+        var dateElement = document.getElementById("currentDate");
+
+        // Set the content of the element to the current date
+        dateElement.textContent = currentDate.toDateString(); 
+		
+// 		window.onbeforeunload = function(event) {
+//   event.returnValue = "Write something clever here..";
+// };
+
+
+
+
+// function test(e) {
+//     e.returnValue = "Write something clever here..";
+// };
+
+
+function myFunction() {
+  return confirm("DO you want to leave?");
+}
+    </script>
+
+</body>
+</html>
